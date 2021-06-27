@@ -20,8 +20,14 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func iniciarAnimacao(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: {
-            self.viewAnimada.frame = CGRect(x: 285.0, y: self.viewAnimada.frame.origin.y, width: self.viewAnimada.frame.width, height: self.viewAnimada.frame.height)
+        // utilização de options para modificar a animação
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveLinear], animations: {
+            self.viewAnimada.frame = CGRect(
+                x: self.viewAnimada.frame.origin.x,
+                y: 420.0,
+                width: self.viewAnimada.frame.width,
+                height: self.viewAnimada.frame.height
+            )
         }, completion: nil)
 
 
